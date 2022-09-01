@@ -1,0 +1,135 @@
+@use '../../Styles/Partials/mixins.scss' as *;
+@use '../../Styles//Partials/typography' as *;
+
+.upload{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border-top: .125rem solid #E1E1E1;
+   font-family: "AvenirNext";
+
+
+   @include tablet{
+    margin:  .5rem .5rem;
+    border: none;
+   }
+
+
+    &__header{
+        align-self: center;
+
+        @include tablet {
+            
+        }
+    }
+    &__title{
+    }
+    //video thumb and text field
+    &__mid{
+
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-bottom: .125rem solid #E1E1E1;
+            margin: 2rem;
+           
+        }
+    }
+    //This is the video and title
+    &__thumb{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-top: .125rem solid #E1E1E1;
+    }
+    &__thumb-title{
+        margin-left: 1rem;
+        font-weight: 700;
+    }
+    &__img{
+        width: 90%;
+        border-radius: .25rem;
+        align-self: center;
+
+        @include tablet{
+            align-self: flex-start;
+            width: 50%;
+            margin-left: 1rem;
+        }
+    }
+    &__text{
+        margin: 1rem;
+        
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__label{
+        color: #AFAFAF;
+        font-size: .75rem;
+        font-weight: 500;
+        margin: .5rem;
+    }
+    &__input{
+        border-radius: 4px;
+        background-color: #FAFAFA;
+        border: .125rem solid #E1E1E1;
+        width: 100% ;
+        padding: .5rem;
+
+        @include tablet{
+        }
+    }
+    &__input::placeholder{
+        color: black;
+    }
+    &__bottom{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+    &__cb{
+        display: flex;
+        justify-content: center;
+        order: 2;
+
+        @include tablet{
+            order: 0;
+        }
+    }
+    &__bottom-cancel{
+        color:#0095FF;
+        text-decoration: none;
+    }
+    &__bottom-button{
+        display: flex;
+        position:relative;
+        flex-direction: row;
+        // align-items: flex-start;
+        justify-content: center;
+        padding: .5rem 0;
+        margin: 0 1rem;
+        border-radius: 4px;
+        background-color: #0095FF;
+    }
+    &__button-img{
+        align-self: flex-start;
+        position: absolute;
+        left: 1rem;
+        top: .5rem;
+
+    }
+    &__button-actual{
+        align-self: center;
+        border: none;
+        color: white;
+        background-color: #0095FF;
+    }
+}

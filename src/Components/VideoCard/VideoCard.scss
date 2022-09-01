@@ -1,0 +1,42 @@
+.video-card{
+    display: flex;
+    margin-bottom: 1rem;
+
+    
+
+    &__image-div{
+        display: flex;
+        justify-content: center;
+        margin-right: 2rem;
+        width: 6rem;
+        height: 4rem;
+        border-radius: 4px;
+        overflow: hidden;
+
+    }
+
+    &__image{
+        align-items: center;
+        width: 100%;
+    }
+    &__text-area{
+        display: flex;
+        flex-direction: column;
+        max-width: 60%;
+
+    }
+    &__title{
+        margin-top: 0;
+        margin-bottom: .25rem;
+        font-weight: 700;
+    }
+    &__channel{
+        margin-top: 0;
+        margin-bottom: .5rem;
+        font-weight: 400;
+    }
+}
+.navlink__next-video{
+    color: #323232;
+    text-decoration: none;
+}

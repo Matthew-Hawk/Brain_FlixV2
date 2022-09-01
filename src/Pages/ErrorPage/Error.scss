@@ -1,0 +1,18 @@
+@use '../../Styles/Partials/mixins.scss' as *;
+@use '../../Styles//Partials/typography' as *;
+
+.main__title-error{
+    text-align: center;
+    font-family: "AvenirNext";
+    margin: 1rem;
+    font-size: 2rem;
+    letter-spacing: .0625rem;
+    word-spacing: .25rem;
+    color: #FFFFFF;
+    @include desktop {
+        font-size: 5rem;
+    }
+}
+
+
+    

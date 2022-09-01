@@ -1,0 +1,48 @@
+@use '../../Styles/Partials/mixins.scss' as *;
+@use '../../Styles//Partials/typography' as *;
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 69vh;
+    background-color: #0095FF;
+
+    @include tablet {
+        height: 85vh;
+    }
+    @include desktop {
+        height: 88vh;
+    }
+
+    &__title{
+        font-family: "AvenirNext";
+        margin: 0;
+        font-size: 3rem;
+        letter-spacing: .0625rem;
+        word-spacing: .25rem;
+        color: #FFFFFF;
+        @include desktop {
+            font-size: 5rem;
+        }
+    }
+    &__link{
+        font-family: "AvenirNext";
+        font-weight: 700;
+        margin: 1rem;
+        padding: .5rem;
+        font-size: 1rem;
+        letter-spacing: .0625rem;
+        word-spacing: .25rem;
+        color: #FFFFFF;
+        border: 4px solid #E1E1E1;
+        border-radius: .25rem;
+        background-color: #0095FF;
+        @include desktop {
+            margin-top: 2rem;
+            font-size: 2rem;
+        }
+    }
+
+}

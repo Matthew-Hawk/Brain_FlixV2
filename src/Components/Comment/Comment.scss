@@ -1,0 +1,25 @@
+.posted-comment-main{
+    display: flex;
+    // flex-direction: column;
+    margin: 1rem;
+    border-bottom: 4px solid #E1E1E1;
+    &__img{
+        background-color: #eee;
+    }
+    &__comm{
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+    &__comm-top{
+        display: flex;
+        justify-content: space-between;
+        font-family: "AvenirNext";
+    }
+    &__name{
+        align-self: center;
+    }
+    &__timestamp{
+        align-self: center;
+    }
+}

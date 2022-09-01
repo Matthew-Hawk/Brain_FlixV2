@@ -1,0 +1,58 @@
+.curr{
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+    margin: 0 1rem;
+    border-bottom: 4px solid #eee;
+
+    &__title{
+        margin: 1rem 1rem;
+        padding-bottom: 1.25rem;
+        border-bottom: 2px solid #eee;
+        font-weight: 600;
+    }
+
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 1rem;
+        padding-bottom: 1.25rem;
+        border-bottom: 2px solid #eee;
+
+    }
+
+    &__info--1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    &__time{
+        font-weight: 400;
+
+    }
+
+    &__info--2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+   &__views{
+    display: flex;
+    font-weight: 400
+    }
+
+    &__likes{
+        display: flex;
+        
+    }
+    &__likes-num{
+        font-weight: 400
+    }
+    &__disc{
+        font-weight: 400;
+        margin: 1rem 1rem;
+    }
+}
