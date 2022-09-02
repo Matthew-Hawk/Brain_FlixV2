@@ -22,49 +22,48 @@ import vidDisc from "../../Assets/Data/video-details.json"
 
 
 function HomePage() {
-  // console.log(currentVideo)
-  const [activeVideo, setActiveVideo] = useState(null);
-  const [currentVideo, setCurrentVido]= useState(Videos)
-  const [videoDetails, setVideoDetails] = useState(vidDisc)
-
+   // console.log(currentVideo)
+   const [activeVideo, setActiveVideo] = useState(null);
+   const [videoList, setVideoList]= useState(null)
+   
+ 
+ 
+   
+   //Axios call to get Video Info
+   useEffect(() =>{
+     axios.get(`https://project-2-api.herokuapp.com/videos/?api_key=c4050ace-fe9c-4796-a68a-4ec9d8f75997`)
+     .then((res) =>{
+       setVideoList(res.data)
+      //  console.log(res.data)
+       getActiveVideo(res.data[0].id)
+     })
+   }, [])
+ 
+   function getActiveVideo(id){
+     axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=c4050ace-fe9c-4796-a68a-4ec9d8f75997`)
+     .then((res) => {
+       setActiveVideo(res.data)
+     })
+   }
+ // console.log(activeVideo)
+   // console.log(videoList)
+ 
+   //This API CALL WORKs 
   
-  //Axios call to get Video Info
-  // useEffect(() =>{
-  //   const fetchData = async () => {
-  //   try {
-  //     axios.get(`https://project-2-api.herokuapp.com/videos/?api_key=c4050ace-fe9c-4796-a68a-4ec9d8f75997`)
-  //   .then((res) =>{
-  //     setCurrentVido(res.data)
-  //   })
-  //   } catch(err) {
-  //     console.log("this thing broke")
-  //   }}
-  //   fetchData()
-  // }, [])
-
-  //This API CALL WORKs 
- 
- 
-
+   if(!activeVideo){
+    return <h1>Loading...</h1>
+  }
 
     return (
     <div className="home-page">
-      <Video 
-        currentVideo={currentVideo}
-        activeVideo={activeVideo}/>
+      <Video activeVideo={activeVideo}/>
       <div className="home-page__bottom">
         <div className="home-page__video-misc">
-          <Disc 
-            videoDetails={videoDetails}
-            activeVideo={activeVideo}/>
-          <CommentList 
-            videoDetails={videoDetails}
-            activeVideo={activeVideo}/>
+          <Disc activeVideo={activeVideo}/>
+          <CommentList activeVideo={activeVideo}/>
         </div>
-        <Next 
-          videoDetails={videoDetails}
-          setActiveVideo={setActiveVideo}
-          activeVideo={activeVideo}/>
+        <Next videoList={videoList}
+        activeVideo={activeVideo}/>
       </div>
       
     </div>

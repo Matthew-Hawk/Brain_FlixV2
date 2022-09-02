@@ -3,13 +3,13 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
 
-function VideoCard({title, channel, image, setActiveVideo, activeVideo, videoDetails}) {
+function VideoCard({title, channel, image}) {
 
-    const id = useParams().id;
+    // const id = useParams().id;
 
-    let selectedVideo = videoDetails.find(vid => id === vid.id);
+    // let selectedVideo = videoDetails.find(vid => id === vid.id);
     
-    setActiveVideo(id);
+    // setActiveVideo(id);
 
 //    useEffect(()=>{
 //     console.log(activeVideo)

@@ -9,7 +9,7 @@ import Comment from "../Comment/Comment"
 
 
 
-function CommentList({videoDetails, activeVideo}) {
+function CommentList({activeVideo}) {
     
     
     
@@ -32,7 +32,7 @@ function CommentList({videoDetails, activeVideo}) {
                 <div className="comment-list__user-space">
                 </div>
                 <div className="comment-list__comm-space">
-                    {videoDetails[0].comments.map((comm) =>{
+                    {activeVideo.comments.map((comm) =>{
                         return(
                             <Comment 
                             key={comm.id}

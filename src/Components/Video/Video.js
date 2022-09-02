@@ -4,13 +4,15 @@ import './Video.scss'
 
 
 // 
-function Video({currentVideo, activeVideo}) {
-// console.log(currentVideo)
+function Video({activeVideo}) {
+// console.log(activeVideo)
 
 
 
 
-// let currentVideoPlaying = Videos.find(curr => curr.id===currentVideo);
+
+
+
 
     return (
       <>
@@ -18,8 +20,7 @@ function Video({currentVideo, activeVideo}) {
           <video className="main-video__main" 
           src="#" 
           alt="Current Selected Video"
-          poster={currentVideo[0].image} 
-          // MIGHT HAVE TO CHANGE TO LOOK FOR IMAGE INSTEAD OF VIDEO
+          poster={activeVideo.image} 
           controls></video>
         </div>
         {/* <Disc
