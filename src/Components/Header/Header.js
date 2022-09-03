@@ -11,7 +11,7 @@ import { Link } from "react-router-dom"
 function Header() {
     return (
         <div className="header">
-            <Link className="header__logo" to="/"><img  src={Logo} alt="Logo"></img></Link>
+            <Link className="header__logo-link" to="/"><img className="header__logo" src={Logo} alt="Logo"></img></Link>
                 <div className="header__search-div">
                     <div className="header__search-bar">
                         <img className="header__search-icon" src={search} alt="search"></img>
@@ -27,9 +27,7 @@ function Header() {
                     <button className="header__button" >Upload</button>
                 </div>
                 </Link>
-                <div className="header__photo-div--2">
                         <img className="header__photo--2" src={photo} alt="Profile"></img>
-                </div>
         </div>
     );
 }  

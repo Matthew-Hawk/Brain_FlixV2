@@ -18,10 +18,24 @@
 }
 
 
+    &__logo-link{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include tablet {
+            align-items: center;
+            // margin: 0 3rem 0 3rem;
+        }
+        @include desktop {
+            margin-left: 2rem;
+        }
+    }
+
     &__logo{
-        align-self: center;
+        // align-items: center;
         height: 2rem;
-        margin: 2rem 0 .5rem 0;
+        margin: 1rem 0;
 
         @include tablet {
             align-items: center;
@@ -39,7 +53,7 @@
         }
 
         @include desktop {
-            margin-left: 34rem;
+            margin-left: 27rem;
         }
         
 
@@ -53,7 +67,10 @@
         margin-right: 12px;
 
         @include tablet {
-            padding: .75rem 3rem .75rem 0;
+            padding: .5rem 3rem .5rem 0;
+        }
+        @include tablet {
+            padding: .5rem 5rem .5rem 0;
         }
     }
     &__input{
@@ -69,8 +86,6 @@
         height: 1.2rem;
         margin: .5rem .5rem;
     }
-
-    
     &__photo--1{
         height: 3rem;
         width: 3rem;
@@ -82,41 +97,32 @@
             display: none;
         }
     }
-    
-    &__photo-div--2{
-        display: none;
-      
 
-        @include tablet {
-            align-self: center;
-            display: inline;
-            width: 3rem;
-            height: 3rem;
-            position: relative;
-            overflow: hidden;
-            border-radius: 50%;
-        }
         &__photo--2{
             display: none;
   
 
             @include tablet {
                 display: inline;
-                margin: 0 auto;
-                margin: -25%; //centers the image
-                height: 100%;
-                width: auto;
+                height: 3rem;
+                width: 3rem;
+                object-fit: cover;
+                margin: 1rem;
+                border-radius: 50%;
             }
         }
 
-    }
     &__link{
         text-decoration: none;
+        @include tablet {
+            align-self: center;
+        }
     }
     &__button-div{
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+        align-self: center;
         font-size: .75rem;
         margin: .5rem 1.5rem;
         padding: 1rem;

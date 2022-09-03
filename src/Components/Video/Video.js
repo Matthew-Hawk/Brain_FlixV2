@@ -5,7 +5,7 @@ import './Video.scss'
 
 // 
 function Video({activeVideo}) {
-// console.log(activeVideo)
+console.log(activeVideo)
 
 
 
