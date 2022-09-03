@@ -1,10 +1,11 @@
+//import the style sheets and assests
 import "./Header.scss"
-import { Link } from "react-router-dom"
-
 import Logo from "../../Assets/Logo/BrainFlix-logo.svg"
 import search from "../../Assets/Icons/search.svg"
 import photo from "../../Assets/Images/Mohan-muruge.jpg"
 import upload from "../../Assets/Icons/upload.svg"
+// improt this thing for the navagation utilitiy
+import { Link } from "react-router-dom"
 
 
 function Header() {
@@ -17,9 +18,7 @@ function Header() {
                         <label htmlFor="search"></label>
                         <input  id="search" className="header__input" name="search" type="text" placeholder="Search" size="8"></input>
                     </div>
-                    <div className="header__photo-div--1">
                         <img className="header__photo--1" src={photo} alt="Profile"></img>
-                    </div>
                 </div>
                 <Link className="header__link" to="/upload">
                 <div className="header__button-div">

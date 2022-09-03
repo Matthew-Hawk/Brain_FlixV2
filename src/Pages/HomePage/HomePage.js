@@ -28,10 +28,10 @@ function HomePage() {
    
  
  
-   
+   const API_URL = process.env.R
    //Axios call to get Video Info
    useEffect(() =>{
-     axios.get(`https://project-2-api.herokuapp.com/videos/?api_key=c4050ace-fe9c-4796-a68a-4ec9d8f75997`)
+     axios.get(`http://localhost:6969/videos"`)
      .then((res) =>{
        setVideoList(res.data)
       //  console.log(res.data)
@@ -40,7 +40,7 @@ function HomePage() {
    }, [])
  
    function getActiveVideo(id){
-     axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=c4050ace-fe9c-4796-a68a-4ec9d8f75997`)
+     axios.get(`http://localhost:6969/videos/${id}`)
      .then((res) => {
        setActiveVideo(res.data)
      })
