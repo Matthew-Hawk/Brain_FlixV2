@@ -77,9 +77,13 @@
         border: 0;
         font-size: 16px;
         color:black;
-        ::placeholder{
-            color: black;
-        }
+
+    }
+    &__input::placeholder{
+        color: black;
+    }
+    &__input:focus{
+        outline-color: #FAFAFA;
     }
     &__search-icon{
         align-self: center;

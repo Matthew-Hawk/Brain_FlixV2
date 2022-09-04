@@ -18,9 +18,9 @@
       
     }
     &__input{
-        @include tablet {
-            // display: flex;
-
+        @include desktop {
+            display: flex;
+            margin-left: 14rem;
         }
     }
     &__tblock{
@@ -41,11 +41,16 @@
         padding: .5rem .5rem 3rem .5rem;
         width: 100%;
         background-color: #FAFAFA;
+        // outline-color: #0095FF;
+    }
+    &__field:focus{
+        outline-color: #0095FF;
     }
     &__field::placeholder{
         font-family: "AvenirNext";
         color: black;
     }
+
     &__add-div{
         display: flex;
         position: relative;
@@ -57,11 +62,20 @@
         @include tablet {
             
         }
+        @include desktop {
+            align-self: center;
+            width: 16rem;
+            height: 4rem;
+            margin-left: 1rem;
+        }
     }
     &__add-img{
         position: absolute;
         left: 1rem;
         top: .5rem;
+        @include desktop{
+            top: 1.2rem;
+        }
     }
     &__add-btn{
         font-family: "AvenirNext";
@@ -69,6 +83,10 @@
         color: white;
         border: none;
         background-color: #0095FF;
+
+        @include desktop{
+            font-size: 1rem;
+        }
 
     }
 }
