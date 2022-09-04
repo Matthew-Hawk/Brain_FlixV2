@@ -11,4 +11,10 @@
             display: flex;
         }
     }
+    &__video-misc{
+
+        @include desktop {
+            margin-left: 4rem;
+        }
+    }
 }

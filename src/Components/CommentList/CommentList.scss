@@ -3,7 +3,10 @@
 
 .comm-user{
     display: flex;
-    margin: 1rem;
+    margin: 0rem;
+    padding: 1rem;
+    border-bottom: 4px solid #E1E1E1;
+
 
     &__user-pic{
         height: 3rem;

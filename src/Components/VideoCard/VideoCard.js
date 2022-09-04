@@ -4,17 +4,10 @@ import { useEffect } from "react";
 
 
 function VideoCard({title, channel, image}) {
-
-    // const id = useParams().id;
-
-    // let selectedVideo = videoDetails.find(vid => id === vid.id);
-    
-    // setActiveVideo(id);
-
-//    useEffect(()=>{
-//     console.log(activeVideo)
-//    }, [activeVideo])
-
+    //TEST TO SEE IF PROPS IS PASSES 
+    // console.log(title)
+    // console.log(channel)
+    // console.log(image)
    
     
     return(
