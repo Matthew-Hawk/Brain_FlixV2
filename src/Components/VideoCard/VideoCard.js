@@ -1,6 +1,5 @@
 import "./VideoCard.scss"
-import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+
 
 
 function VideoCard({title, channel, image}) {

@@ -12,7 +12,7 @@ function Next({videoList, activeVideo}) {
     <div className="next">
         <h3 className="next__title">NEXT VIDEO</h3>
         <div className="next__video-area">
-            { videoList.map((info)=> {
+            {videoList.map((info)=> {
                 return(
                     <NavLink className={`navlink__next-video${activeVideo===info.id?" notme--butyes":""}`} to={`/${info.id}`}>
                     <VideoCard
@@ -22,7 +22,8 @@ function Next({videoList, activeVideo}) {
                     image={info.image}
                     activeVideo={activeVideo}
                     videoList={videoList}
-                    /></NavLink>
+                    />
+                    // </NavLink>
                 )
             }) }
         </div>

@@ -94,6 +94,10 @@
         @include tablet {
             flex-direction: row;
         }
+        @include desktop {
+            align-self: flex-end;
+        }
+
     }
     &__cb{
         display: flex;
@@ -111,13 +115,15 @@
     &__bottom-button{
         display: flex;
         position:relative;
-        flex-direction: row;
         // align-items: flex-start;
         justify-content: center;
         padding: .5rem 0;
         margin: 0 1rem;
         border-radius: 4px;
         background-color: #0095FF;
+        @include desktop {
+            padding: 1rem 2.5rem;
+        }
     }
     &__button-img{
         align-self: flex-start;

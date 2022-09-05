@@ -16,7 +16,7 @@ function CommentList({activeVideo}) {
     return (
         <>
             <div className="comm-user">
-                <img className="comm-user__user-pic" src={Photo}></img>
+                <img className="comm-user__user-pic" src={Photo} alt="a profile pic"></img>
             <div className="comm-user__input">
                 <div className="comm-user__tblock"> 
                     <label className="comm-user__label" htmlFor="comment">JOIN THE CONVERSATION</label>

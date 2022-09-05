@@ -8,12 +8,6 @@ function Video({activeVideo}) {
 console.log(activeVideo)
 
 
-
-
-
-
-
-
     return (
       <>
         <div className="main-video">
